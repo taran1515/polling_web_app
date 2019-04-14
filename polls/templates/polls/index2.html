@@ -1,0 +1,15 @@
+{% extends 'polls/base.html' %}
+
+{%block abc %}
+
+<div class="jombotron">
+    <h1> Welcome!</h1>
+    {% if user.is_authenticated %}
+    <h3>Click <a href="{% url 'polls:index' %}">here</a> to go to Polls</h3>
+    {%else%}
+    <h3>Login to go for polling</h3>
+    {%endif%}
+
+</div>
+
+{%endblock %}
